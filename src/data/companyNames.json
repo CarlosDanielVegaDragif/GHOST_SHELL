@@ -1,0 +1,452 @@
+[
+  {
+    "id": "1825",
+    "name": "Chief Limited",
+    "difficulty": 1,
+    "multipliers": {
+      "xp": 1.0,
+      "money": 1.0
+    }
+  },
+  {
+    "id": "0410",
+    "name": "Ridge Productions",
+    "difficulty": 1,
+    "multipliers": {
+      "xp": 1.0,
+      "money": 1.0
+    }
+  },
+  {
+    "id": "4507",
+    "name": "Robin Productions",
+    "difficulty": 1,
+    "multipliers": {
+      "xp": 1.0,
+      "money": 1.0
+    }
+  },
+  {
+    "id": "4013",
+    "name": "Whirlwindustries",
+    "difficulty": 1,
+    "multipliers": {
+      "xp": 1.0,
+      "money": 1.0
+    }
+  },
+  {
+    "id": "3658",
+    "name": "Nexlify Group",
+    "difficulty": 1,
+    "multipliers": {
+      "xp": 1.0,
+      "money": 1.0
+    }
+  },
+  {
+    "id": "2287",
+    "name": "Vortex Dynamics",
+    "difficulty": 2,
+    "multipliers": {
+      "xp": 1.35,
+      "money": 1.75
+    }
+  },
+  {
+    "id": "1680",
+    "name": "LumenForge",
+    "difficulty": 2,
+    "multipliers": {
+      "xp": 1.35,
+      "money": 1.75
+    }
+  },
+  {
+    "id": "8936",
+    "name": "AetherLabs",
+    "difficulty": 2,
+    "multipliers": {
+      "xp": 1.35,
+      "money": 1.75
+    }
+  },
+  {
+    "id": "1425",
+    "name": "Pinnacle Pulse",
+    "difficulty": 2,
+    "multipliers": {
+      "xp": 1.35,
+      "money": 1.75
+    }
+  },
+  {
+    "id": "9675",
+    "name": "Stratum Ventures",
+    "difficulty": 2,
+    "multipliers": {
+      "xp": 1.35,
+      "money": 1.75
+    }
+  },
+  {
+    "id": "6913",
+    "name": "Cobalt Horizon",
+    "difficulty": 3,
+    "multipliers": {
+      "xp": 1.7,
+      "money": 2.5
+    }
+  },
+  {
+    "id": "0521",
+    "name": "NovaPulse Enterprises",
+    "difficulty": 3,
+    "multipliers": {
+      "xp": 1.7,
+      "money": 2.5
+    }
+  },
+  {
+    "id": "0489",
+    "name": "Ironclad Solutions",
+    "difficulty": 3,
+    "multipliers": {
+      "xp": 1.7,
+      "money": 2.5
+    }
+  },
+  {
+    "id": "1536",
+    "name": "Zephyr Collective",
+    "difficulty": 3,
+    "multipliers": {
+      "xp": 1.7,
+      "money": 2.5
+    }
+  },
+  {
+    "id": "3583",
+    "name": "Quantum Drift",
+    "difficulty": 3,
+    "multipliers": {
+      "xp": 1.7,
+      "money": 2.5
+    }
+  },
+  {
+    "id": "3812",
+    "name": "Apexion Systems",
+    "difficulty": 4,
+    "multipliers": {
+      "xp": 2.05,
+      "money": 3.25
+    }
+  },
+  {
+    "id": "8280",
+    "name": "Vanguard Echo",
+    "difficulty": 4,
+    "multipliers": {
+      "xp": 2.05,
+      "money": 3.25
+    }
+  },
+  {
+    "id": "9864",
+    "name": "Sablethorn Corp",
+    "difficulty": 4,
+    "multipliers": {
+      "xp": 2.05,
+      "money": 3.25
+    }
+  },
+  {
+    "id": "0435",
+    "name": "Radiant Axis",
+    "difficulty": 4,
+    "multipliers": {
+      "xp": 2.05,
+      "money": 3.25
+    }
+  },
+  {
+    "id": "9196",
+    "name": "Obsidian Wave",
+    "difficulty": 4,
+    "multipliers": {
+      "xp": 2.05,
+      "money": 3.25
+    }
+  },
+  {
+    "id": "3258",
+    "name": "Helixspire",
+    "difficulty": 5,
+    "multipliers": {
+      "xp": 2.4,
+      "money": 4.0
+    }
+  },
+  {
+    "id": "8929",
+    "name": "Thunderforge Ltd",
+    "difficulty": 5,
+    "multipliers": {
+      "xp": 2.4,
+      "money": 4.0
+    }
+  },
+  {
+    "id": "6874",
+    "name": "Ecliptica",
+    "difficulty": 5,
+    "multipliers": {
+      "xp": 2.4,
+      "money": 4.0
+    }
+  },
+  {
+    "id": "3612",
+    "name": "Brightspire Industries",
+    "difficulty": 5,
+    "multipliers": {
+      "xp": 2.4,
+      "money": 4.0
+    }
+  },
+  {
+    "id": "7360",
+    "name": "Nexus Hollow",
+    "difficulty": 5,
+    "multipliers": {
+      "xp": 2.4,
+      "money": 4.0
+    }
+  },
+  {
+    "id": "9655",
+    "name": "Caliber Drift",
+    "difficulty": 6,
+    "multipliers": {
+      "xp": 2.75,
+      "money": 4.75
+    }
+  },
+  {
+    "id": "4558",
+    "name": "Prismatica",
+    "difficulty": 6,
+    "multipliers": {
+      "xp": 2.75,
+      "money": 4.75
+    }
+  },
+  {
+    "id": "0107",
+    "name": "Voltspire",
+    "difficulty": 6,
+    "multipliers": {
+      "xp": 2.75,
+      "money": 4.75
+    }
+  },
+  {
+    "id": "2616",
+    "name": "Aurora Core",
+    "difficulty": 6,
+    "multipliers": {
+      "xp": 2.75,
+      "money": 4.75
+    }
+  },
+  {
+    "id": "6925",
+    "name": "Titanveil",
+    "difficulty": 6,
+    "multipliers": {
+      "xp": 2.75,
+      "money": 4.75
+    }
+  },
+  {
+    "id": "5575",
+    "name": "SpectraLynx",
+    "difficulty": 7,
+    "multipliers": {
+      "xp": 3.1,
+      "money": 5.5
+    }
+  },
+  {
+    "id": "4553",
+    "name": "Emberquartz",
+    "difficulty": 7,
+    "multipliers": {
+      "xp": 3.1,
+      "money": 5.5
+    }
+  },
+  {
+    "id": "2548",
+    "name": "Chronos Edge",
+    "difficulty": 7,
+    "multipliers": {
+      "xp": 3.1,
+      "money": 5.5
+    }
+  },
+  {
+    "id": "3528",
+    "name": "Vellichor Group",
+    "difficulty": 7,
+    "multipliers": {
+      "xp": 3.1,
+      "money": 5.5
+    }
+  },
+  {
+    "id": "5515",
+    "name": "Ignis Point",
+    "difficulty": 7,
+    "multipliers": {
+      "xp": 3.1,
+      "money": 5.5
+    }
+  },
+  {
+    "id": "1675",
+    "name": "Solstice Forge",
+    "difficulty": 8,
+    "multipliers": {
+      "xp": 3.45,
+      "money": 6.25
+    }
+  },
+  {
+    "id": "1520",
+    "name": "Cryonix Labs",
+    "difficulty": 8,
+    "multipliers": {
+      "xp": 3.45,
+      "money": 6.25
+    }
+  },
+  {
+    "id": "6225",
+    "name": "Luminara Ventures",
+    "difficulty": 8,
+    "multipliers": {
+      "xp": 3.45,
+      "money": 6.25
+    }
+  },
+  {
+    "id": "1585",
+    "name": "Stellarion",
+    "difficulty": 8,
+    "multipliers": {
+      "xp": 3.45,
+      "money": 6.25
+    }
+  },
+  {
+    "id": "5882",
+    "name": "Nebulight",
+    "difficulty": 8,
+    "multipliers": {
+      "xp": 3.45,
+      "money": 6.25
+    }
+  },
+  {
+    "id": "5636",
+    "name": "Arcforge Industries",
+    "difficulty": 9,
+    "multipliers": {
+      "xp": 3.8,
+      "money": 7.0
+    }
+  },
+  {
+    "id": "9892",
+    "name": "Mythril Works",
+    "difficulty": 9,
+    "multipliers": {
+      "xp": 3.8,
+      "money": 7.0
+    }
+  },
+  {
+    "id": "4334",
+    "name": "Onyx Horizon",
+    "difficulty": 9,
+    "multipliers": {
+      "xp": 3.8,
+      "money": 7.0
+    }
+  },
+  {
+    "id": "0712",
+    "name": "Zenith Pulse",
+    "difficulty": 9,
+    "multipliers": {
+      "xp": 3.8,
+      "money": 7.0
+    }
+  },
+  {
+    "id": "7528",
+    "name": "Rivenstone",
+    "difficulty": 9,
+    "multipliers": {
+      "xp": 3.8,
+      "money": 7.0
+    }
+  },
+  {
+    "id": "8786",
+    "name": "Fluxora",
+    "difficulty": 10,
+    "multipliers": {
+      "xp": 4.15,
+      "money": 7.75
+    }
+  },
+  {
+    "id": "2046",
+    "name": "Graviton Peak",
+    "difficulty": 10,
+    "multipliers": {
+      "xp": 4.15,
+      "money": 7.75
+    }
+  },
+  {
+    "id": "6202",
+    "name": "Elysium Strand",
+    "difficulty": 10,
+    "multipliers": {
+      "xp": 4.15,
+      "money": 7.75
+    }
+  },
+  {
+    "id": "1292",
+    "name": "Polaris Drift",
+    "difficulty": 10,
+    "multipliers": {
+      "xp": 4.15,
+      "money": 7.75
+    }
+  },
+  {
+    "id": "9045",
+    "name": "Shadowspire Collective",
+    "difficulty": 10,
+    "multipliers": {
+      "xp": 4.15,
+      "money": 7.75
+    }
+  }
+]

@@ -1,0 +1,19 @@
+.status-window {
+  position: absolute;
+  background: black;
+  border: 1px solid #00ff99;
+  color: #00ff99;
+  width: 260px;
+  font-family: monospace;
+}
+
+.status-header {
+  cursor: move;
+  user-select: none; /* 🔴 ESTO evita seleccionar texto */
+  background: #003322;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
