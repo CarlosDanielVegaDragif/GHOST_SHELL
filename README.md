@@ -1,73 +1,130 @@
-# React + TypeScript + Vite
+# GHOST_SHELL
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GHOST_SHELL is a terminal-driven incremental hacking game built with React and TypeScript.  
+The entire gameplay experience happens through a simulated command-line interface, where players interact with programs, manage infrastructure, and expand their digital operation.
 
-Currently, two official plugins are available:
+This repository represents an MVP focused on core progression systems, terminal architecture, and state-driven game flow.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎮 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+You play as an operator inside a fictional darknet shell, managing resources, expanding infrastructure, and growing influence through hacking targets and investing in miners and hackers.
 
-## Expanding the ESLint configuration
+The game emphasizes:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Command-driven interaction
+- Mode-based state management
+- Modular terminal program architecture
+- Expandable progression systems
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React**
+- **TypeScript**
+- **Vite**
+- Functional components with Hooks
+- State-driven UI architecture
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🏗 Architecture Highlights
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Terminal as a State Machine
+
+The terminal operates through mode-based input handling:
+
+- `shell`
+- `minercore`
+- `minercoreShop`
+- (extensible for future programs)
+
+Each mode defines its own valid commands and behavior, allowing scalable program simulation inside a single interface.
+
+---
+
+### Centralized Input Handling
+
+User input is processed at the application level and routed depending on the current terminal mode.  
+This ensures:
+
+- Clear separation between UI and game logic
+- Scalable command registration
+- Predictable state transitions
+
+---
+
+### Asynchronous Systems
+
+Hacking uses a timed progression system:
+
+- Interval-driven progress updates
+- Dynamic reward calculation
+- Reactive UI updates (progress bar)
+- Audio feedback integration
+
+---
+
+### Modular Command System
+
+Commands are parsed through a dedicated parsing layer, enabling:
+
+- Easy command expansion
+- Context-based command availability
+- Future integration of risk/detection mechanics
+
+---
+
+## 🧠 Core Features (MVP)
+
+- Fully interactive terminal-based interface
+- Command-driven gameplay inspired by real shells
+- 50 hackable companies with scaling difficulty
+- Miners and hackers generating passive income
+- Mode-based in-terminal programs
+- Real-time hacking progress system
+- Audio feedback for rewards and hacking activity
+- Auto-scrolling and auto-focus UX improvements
+
+---
+
+## 🔄 Current Gameplay Loop
+
+1. Scan available targets
+2. Hack companies based on level requirements
+3. Gain money and experience
+4. Invest in miners and hackers
+5. Increase operational efficiency
+6. Repeat and scale
+
+---
+
+## 📈 Planned Features
+
+- Risk & detection systems
+- Counter-hacking mechanics
+- Active security events
+- Defensive infrastructure systems
+- Deeper economy balancing
+- Persistent progression systems
+
+---
+
+## 🎯 Design Goals
+
+- Simulate a believable terminal-based environment
+- Maintain clean separation between UI and game logic
+- Build systems that scale without architectural rewrites
+- Focus on extensibility from the MVP stage
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/yourusername/ghost_shell.git
+cd ghost_shell
+npm install
+npm run dev
