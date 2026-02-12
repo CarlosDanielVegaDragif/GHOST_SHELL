@@ -124,7 +124,7 @@ Commands are parsed through a dedicated parsing layer, enabling:
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/yourusername/ghost_shell.git
+git clone https://github.com/CarlosDanielVegaDragif/GHOST_SHELL.git
 cd ghost_shell
 npm install
 npm run dev
