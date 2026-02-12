@@ -1,12 +1,14 @@
 .terminal-messages-container {
   flex: 1;
   overflow-y: auto;
+  overflow-x: auto;
   padding: 20px;
   color: #ccc;
 }
 
 .terminal-line {
   line-height: 1.4;
+  white-space: pre;
 }
 
 .terminal-line.system {

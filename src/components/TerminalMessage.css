@@ -31,4 +31,5 @@
 
 .terminal-line {
   margin-bottom: 6px;
+  white-space: pre;
 }

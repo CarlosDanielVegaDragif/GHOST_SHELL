@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { TerminalInput } from './components/TerminalInput.tsx'
 import TerminalMessages from './components/TerminalMessages.tsx'
 import { StatusWindow } from './components/StatusWindow.tsx'
@@ -9,6 +9,10 @@ import { parseCommand } from './scripts/parseCommand.ts'
 //ascii
 import minercoreAscii from './ascii/mining.txt?raw'
 import minercoreShopAscii from './ascii/minersShop.txt?raw'
+// audio asset for currency gain
+const moneySoundUrl = new URL('./sounds/moneySound.wav', import.meta.url).href;
+// audio asset for hack progress increments
+const progressSoundUrl = new URL('./sounds/progressSound.wav', import.meta.url).href;
 import './App.css'
 
 function App() {
@@ -36,6 +40,14 @@ function App() {
   });
 
   const [theme, setTheme] = useState<'theme-dark' | 'theme-light'>('theme-dark');
+  const moneyAudioRef = useRef<HTMLAudioElement | null>(null);
+  const progressAudioRef = useRef<HTMLAudioElement | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    moneyAudioRef.current = new Audio(moneySoundUrl);
+    progressAudioRef.current = new Audio(progressSoundUrl);
+  }, []);
 
   useEffect(() => {
     try {
@@ -90,11 +102,18 @@ function App() {
     openStatus: () =>
       setWindows(prev => ({ ...prev, status: true })),
     getCompanies: () => companies,
-    addMoney: () =>
+    addMoney: () => {
       setPlayerStats(prev => ({
         ...prev,
         money: prev.money + 1000
-      })),
+      }));
+      try {
+        if (moneyAudioRef.current) {
+          moneyAudioRef.current.currentTime = 0;
+          void moneyAudioRef.current.play();
+        }
+      } catch (e) {}
+    },
     saveGame: (slot: string) => {
       try {
         const key = `save_slot_${slot}`;
@@ -475,12 +494,27 @@ function App() {
         xp: prev.xp + Math.floor(income / 10),}));
     }, intervalMs);
 
-    return () => clearInterval(id);
+    // play currency sound on miner income
+    // (play after updating state so UI update and sound are concurrent)
+    const playOnTick = () => {
+      try {
+        if (moneyAudioRef.current) {
+          moneyAudioRef.current.currentTime = 0;
+          void moneyAudioRef.current.play();
+        }
+      } catch (e) {}
+    };
+
+    const playId = window.setInterval(playOnTick, intervalMs);
+
+    return () => {
+      clearInterval(id);
+      clearInterval(playId);
+    };
   }, [miningActive, playerStats.miners]);
 
   useEffect(() => {
     if (!activeHack) return;
-
     const interval = setInterval(() => {
       setActiveHack(prev => {
         if (!prev) return null;
@@ -505,6 +539,13 @@ function App() {
             money: stats.money + Math.floor(100 * company!.multipliers.money),
           }));
 
+          try {
+            if (moneyAudioRef.current) {
+              moneyAudioRef.current.currentTime = 0;
+              void moneyAudioRef.current.play();
+            }
+          } catch (e) {}
+
           if (playerStats.xp >= 100) {
             setPlayerStats(prev => ({
               ...prev,
@@ -518,12 +559,30 @@ function App() {
 
         const increment = Math.max(0.1, playerStats.pc - company!.difficulty / 4);
         const newProgress = Math.min(100, prev.progress + increment);
+
+        // play progress tick sound when progress increases
+        if (newProgress > prev.progress) {
+          try {
+            if (progressAudioRef.current) {
+              progressAudioRef.current.currentTime = 0;
+              void progressAudioRef.current.play();
+            }
+          } catch (e) {}
+        }
+
         return { ...prev, progress: newProgress };
       });
     }, 300);
 
     return () => clearInterval(interval);
-  }, [activeHack]);
+  }, [activeHack, playerStats.pc]);
+
+  // focus input when window/tab gains focus
+  useEffect(() => {
+    const handler = () => inputRef.current?.focus();
+    window.addEventListener('focus', handler);
+    return () => window.removeEventListener('focus', handler);
+  }, []);
 
   useEffect(() => {
     if(playerStats.hackers == 0) return;
@@ -534,7 +593,21 @@ function App() {
         xp: prev.xp + (prev.hackers * 2),
       }));
     }, 5000);
-    return () => clearInterval(interval);
+    // play currency sound on hacker income ticks
+    const playTick = () => {
+      try {
+        if (moneyAudioRef.current) {
+          moneyAudioRef.current.currentTime = 0;
+          void moneyAudioRef.current.play();
+        }
+      } catch (e) {}
+    };
+    const playInterval = setInterval(playTick, 5000);
+
+    return () => {
+      clearInterval(interval);
+      clearInterval(playInterval);
+    };
   }, [playerStats.hackers]);
 
   useEffect(() => {
@@ -604,7 +677,7 @@ function App() {
           </div>
         )}
 
-        <TerminalInput onSubmit={handleTerminalInput} />
+        <TerminalInput ref={inputRef} onSubmit={handleTerminalInput} />
 
 
         {windows.status && (

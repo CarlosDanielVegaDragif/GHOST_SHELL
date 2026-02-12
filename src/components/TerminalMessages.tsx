@@ -6,8 +6,17 @@ type TerminalMsg = { id: string; sender: string; message: string };
 
 function TerminalMessages({ terminalMessages }: { terminalMessages: TerminalMsg[] }) {
   const terminalMessagesRef = useRef<HTMLDivElement | null>(null);
+  const bottomRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    // Prefer scrolling the last element into view — more reliable across layouts
+    try {
+      if (bottomRef.current) {
+        bottomRef.current.scrollIntoView({ behavior: 'auto', block: 'end' });
+        return;
+      }
+    } catch (e) {}
+
     const containerElem = terminalMessagesRef.current;
     if (containerElem) {
       containerElem.scrollTop = containerElem.scrollHeight;
@@ -32,6 +41,7 @@ function TerminalMessages({ terminalMessages }: { terminalMessages: TerminalMsg[
           />
         );
       })}
+      <div ref={bottomRef} />
     </div>
   )
 }
