@@ -7,7 +7,7 @@ This repository represents an MVP focused on core progression systems, terminal 
 
 ---
 
-## 🎮 Overview
+## Overview
 
 You play as an operator inside a fictional darknet shell, managing resources, expanding infrastructure, and growing influence through hacking targets and investing in miners and hackers.
 
@@ -20,7 +20,7 @@ The game emphasizes:
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **React**
 - **TypeScript**
@@ -30,7 +30,7 @@ The game emphasizes:
 
 ---
 
-## 🏗 Architecture Highlights
+## Architecture Highlights
 
 ### Terminal as a State Machine
 
@@ -77,7 +77,7 @@ Commands are parsed through a dedicated parsing layer, enabling:
 
 ---
 
-## 🧠 Core Features (MVP)
+## Core Features (MVP)
 
 - Fully interactive terminal-based interface
 - Command-driven gameplay inspired by real shells
@@ -90,7 +90,7 @@ Commands are parsed through a dedicated parsing layer, enabling:
 
 ---
 
-## 🔄 Current Gameplay Loop
+## Current Gameplay Loop
 
 1. Scan available targets
 2. Hack companies based on level requirements
@@ -101,7 +101,7 @@ Commands are parsed through a dedicated parsing layer, enabling:
 
 ---
 
-## 📈 Planned Features
+## Planned Features
 
 - Risk & detection systems
 - Counter-hacking mechanics
@@ -112,7 +112,7 @@ Commands are parsed through a dedicated parsing layer, enabling:
 
 ---
 
-## 🎯 Design Goals
+## Design Goals
 
 - Simulate a believable terminal-based environment
 - Maintain clean separation between UI and game logic
@@ -121,7 +121,7 @@ Commands are parsed through a dedicated parsing layer, enabling:
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 git clone https://github.com/CarlosDanielVegaDragif/GHOST_SHELL.git
